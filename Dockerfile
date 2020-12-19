@@ -4,7 +4,7 @@
 #  Alex Shvid
 #
 
-FROM nvidia/cuda:10.2-runtime-ubuntu18.04
+FROM nvidia/cuda:10.2-develop-ubuntu18.04
 
 LABEL maintainer "Alex Shvid <a@shvid.com>"
 
