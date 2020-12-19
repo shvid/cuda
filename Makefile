@@ -1,5 +1,5 @@
 
-IMAGE=cu102-ubuntu18-dev
+IMAGE=cuda
 VERSION := $(shell git describe --tags --always --dirty)
 REGISTRY := shvid
 TAG := $(VERSION)

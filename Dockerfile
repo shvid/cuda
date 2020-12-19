@@ -27,5 +27,5 @@ RUN pip3 install --upgrade pip --trusted-host pypi.org --trusted-host files.pyth
 RUN pip install -U cryptography requests[security] --no-cache --trusted-host pypi.org --trusted-host files.pythonhosted.org
 
 # setup PDT timezone
-RUN dpkg-reconfigure --frontend noninteractive tzdata
 RUN cp /usr/share/zoneinfo/America/Los_Angeles /etc/localtime && echo "America/Los_Angeles" > /etc/timezone
+RUN dpkg-reconfigure --frontend noninteractive tzdata
