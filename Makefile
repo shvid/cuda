@@ -14,7 +14,7 @@ build:
 	docker build -t $(REGISTRY)/$(IMAGE):$(TAG) -f Dockerfile .
 
 run: build
-	docker run -it $(REGISTRY)/$(IMAGE):$(TAG) /bin/bash
+	docker run -it --rm --runtime=nvidia $(REGISTRY)/$(IMAGE):$(TAG) nvidia-smi
 
 dump: build
 	docker save $(REGISTRY)/$(IMAGE):$(TAG) | gzip > $(IMAGE).tar.gz
