@@ -23,8 +23,9 @@ push: build
 	docker push ${REGISTRY}/${IMAGE}:${TAG}
 
 login:
-	docker login ${REGISTRY}
+	docker login docker.io
 
 clean:
 	docker ps -q -f 'status=exited' | xargs docker rm
+	docker image list | grep \\-dirty | awk -F' ' '{print $3}' | xargs docker image rm
 	echo "y" | docker system prune -a
