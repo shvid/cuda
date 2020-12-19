@@ -28,4 +28,4 @@ RUN pip install -U cryptography requests[security] --no-cache --trusted-host pyp
 
 # setup PDT timezone
 RUN cp /usr/share/zoneinfo/America/Los_Angeles /etc/localtime && echo "America/Los_Angeles" > /etc/timezone
-RUN dpkg-reconfigure --frontend noninteractive tzdata
+#RUN dpkg-reconfigure --frontend noninteractive tzdata
